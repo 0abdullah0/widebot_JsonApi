@@ -69,6 +69,7 @@ public class SampleController {
 		 //convert user data to facebook gallery card format
 		 gallery_format=fbGalleryCard.mapToFbGalleryCard(user);
 		 
+		 //inject facebook gallery into widebot JsonApi
 		 widebotJsonResponse=widebotApi.toWideBotJsonApi(gallery_format, id);
 		 
 		 return ResponseEntity.ok(widebotJsonResponse);
